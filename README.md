@@ -5,7 +5,7 @@
 
 ---
 
-## 📝 Descripción
+## Descripción
 
 Este proyecto consiste en una automatización sencilla con **Python y Selenium** para validar un formulario web. Se simula el llenado de un formulario HTML con los campos de nombre, correo y mensaje, y se verifica que se muestre una alerta de "Mensaje enviado con éxito".
 
@@ -13,7 +13,7 @@ Además, se incluyen capturas de pantalla automáticas de cada paso del proceso 
 
 ---
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 
 auto/
 ├── form.html # Formulario HTML a automatizar
@@ -27,7 +27,7 @@ auto/
 
 ---
 
-## ✅ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - Python 3.13
 - Selenium
@@ -37,7 +37,7 @@ auto/
 
 ---
 
-## 🚀 Cómo ejecutar
+## Cómo ejecutar
 
 1. Instala las dependencias:
 
@@ -51,30 +51,19 @@ pip install -r requirements.txt
 python -m pytest test_form.py --html=reports/report.html
 ```
 
-# 📋 Revisa:
+# Revisa:
 
-- **📷 Capturas de pantalla** en `screenshots/`
-- **📊 Reporte detallado** en `reports/report.html`
+- **Capturas de pantalla** en `screenshots/`
+- **Reporte detallado** en `reports/report.html`
 
 ---
 
-## 📚 Historias de Usuario
+## Historias de Usuario
 Las historias de usuario están disponibles en:  
 📄 `docs/historias_usuario.md`
 
 ---
 
-## 🎥 Video
+## Video
 
 👉 Aquí puedes enlazar el video de demostración cuando esté listo.
-
----
-
-## 📬 Contacto
-
-Cualquier duda o comentario, puedes escribirme directamente.
-
-
----
-
-¿Te gustaría que también te genere el archivo `requirements.txt` con las dependencias exactas que usaste? Puedo dejarte todo listo para subirlo a GitHub.
