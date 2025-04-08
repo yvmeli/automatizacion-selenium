@@ -66,4 +66,4 @@ Las historias de usuario están disponibles en:
 
 ## Video
 
-👉 Aquí puedes enlazar el video de demostración cuando esté listo.
+👉 https://youtu.be/oczWmK-Osxc?si=0cFNRdlCqmsJ3DZK
