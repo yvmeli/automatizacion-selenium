@@ -51,7 +51,7 @@
 
 ### 🧾 Historia 5: Validación de campos obligatorios
 
-**Como** desarrollador del sitio,  
+**Como** desarrolladora del sitio,  
 **quiero** validar que todos los campos estén completos,  
 **para** asegurar que recibimos información completa.
 
@@ -62,7 +62,7 @@
 
 ### 🧾 Historia 6: Validación de formato de email
 
-**Como** desarrollador del sitio,  
+**Como** desarrolladora del sitio,  
 **quiero** validar que el email tenga formato correcto,  
 **para** asegurar que podemos contactar al usuario.
 
