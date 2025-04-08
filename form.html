@@ -3,7 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulario</title>
+  <style>
+    #mensaje {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: none;
+    }
+    .error {
+      color: #721c24;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+    }
+    .exito {
+      color: #155724;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+    }
+  </style>
   <script>
+    function mostrarMensaje(texto, tipo) {
+      const div = document.getElementById("mensaje");
+      div.innerText = texto;
+      div.className = tipo;
+      div.style.display = "block";
+    }
+
     function validarFormulario(event) {
       event.preventDefault();
 
@@ -13,16 +39,21 @@
       const telefono = document.forms["formulario"]["telefono"].value.trim();
 
       if (!nombre || !apellido || !email || !telefono) {
-        alert("Por favor, complete todos los campos");
+        mostrarMensaje("Por favor, complete todos los campos", "error");
+        return;
+      }
+
+      if (!/^\d+$/.test(telefono)) {
+        mostrarMensaje("El campo teléfono solo debe contener números", "error");
         return;
       }
 
       if (!email.includes("@")) {
-        alert("Correo electrónico inválido");
+        mostrarMensaje("Correo electrónico inválido", "error");
         return;
       }
 
-      alert("Formulario enviado correctamente");
+      mostrarMensaje("Formulario enviado correctamente", "exito");
     }
   </script>
 </head>
@@ -39,9 +70,11 @@
     <input type="text" name="email" id="email"><br><br>
 
     <label for="telefono">Teléfono:</label>
-    <input type="text" name="telefono" id="telefono"><br><br>
+    <input type="tel" name="telefono" id="telefono" pattern="[0-9]+" title="Solo números permitidos"><br><br>
 
     <button type="submit">Enviar</button>
   </form>
+
+  <div id="mensaje"></div>
 </body>
 </html>
