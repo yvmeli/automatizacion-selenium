@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault();
+
+      const nombre = document.forms["formulario"]["nombre"].value.trim();
+      const apellido = document.forms["formulario"]["apellido"].value.trim();
+      const email = document.forms["formulario"]["email"].value.trim();
+      const telefono = document.forms["formulario"]["telefono"].value.trim();
+
+      if (!nombre || !apellido || !email || !telefono) {
+        alert("Por favor, complete todos los campos");
+        return;
+      }
+
+      if (!email.includes("@")) {
+        alert("Correo electrónico inválido");
+        return;
+      }
+
+      alert("Formulario enviado correctamente");
+    }
+  </script>
+</head>
+<body>
+  <h1>Formulario de prueba</h1>
+  <form name="formulario" onsubmit="validarFormulario(event)">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre"><br><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" id="apellido"><br><br>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="text" name="email" id="email"><br><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" name="telefono" id="telefono"><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
